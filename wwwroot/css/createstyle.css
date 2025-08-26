@@ -1,0 +1,133 @@
+﻿body {
+    background: linear-gradient(135deg, #f0f4f8 0%, #d9e2ec 100%);
+    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.card {
+    border-radius: 15px;
+    overflow: hidden;
+    animation: fadeIn 0.5s ease-in-out;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+    .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15) !important;
+    }
+
+.card-header {
+    background: linear-gradient(90deg, #007bff, #0056b3);
+    padding: 1.5rem;
+    border-bottom: none;
+}
+
+    .card-header h2 {
+        font-size: 1.8rem;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+    }
+
+.form-label {
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.form-control, .form-select {
+    border-radius: 8px;
+    border: 1px solid #ced4da;
+    transition: all 0.3s ease;
+    background-color: #fff;
+    padding: 0.75rem;
+}
+
+    .form-control:focus, .form-select:focus {
+        border-color: #007bff;
+        box-shadow: 0 0 8px rgba(0, 123, 255, 0.3);
+        transform: scale(1.02);
+    }
+
+    .form-control::placeholder {
+        color: #6c757d;
+        opacity: 0.7;
+    }
+
+.btn-primary {
+    background: linear-gradient(90deg, #007bff, #00c4ff);
+    border: none;
+    border-radius: 8px;
+    padding: 0.75rem 1.5rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+    .btn-primary:hover {
+        background: linear-gradient(90deg, #0056b3, #0096cc);
+        transform: translateY(-2px);
+    }
+
+.btn-outline-secondary {
+    border-radius: 8px;
+    padding: 0.75rem 1.5rem;
+    transition: all 0.3s ease;
+}
+
+    .btn-outline-secondary:hover {
+        background-color: #f8f9fa;
+        transform: translateY(-2px);
+    }
+
+.alert-danger {
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    animation: slideIn 0.5s ease;
+}
+
+.form-group {
+    position: relative;
+}
+
+.text-danger {
+    font-size: 0.85rem;
+    margin-top: 0.25rem;
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@media (max-width: 576px) {
+    .card-header h2 {
+        font-size: 1.5rem;
+    }
+
+    .form-control, .form-select {
+        padding: 0.65rem;
+    }
+
+    .btn-primary, .btn-outline-secondary {
+        padding: 0.65rem 1.2rem;
+    }
+}
